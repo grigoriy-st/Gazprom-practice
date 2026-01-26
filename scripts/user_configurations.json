@@ -1,0 +1,23 @@
+{
+  "bootloader": "systemd-boot",
+  "hostname": "arch-vm",
+  "timezone": "Asia/Omsk",
+  "audio": null,
+  "mirror_region": "Russia",
+  "disk_layouts": "/tmp/disk_layout.json",
+  "!root-password": "12345678",
+  "superusers": {
+    "grigoriy-st": {
+      "!password": "12345678",
+      "sudo": true
+    }
+  },
+  "packages": ["git", "openssh", "tmux", "less", "more", "base-devel"],
+  "profile": {
+    "path": "/usr/share/archinstall/profiles/minimal.py"
+  },
+  "services": ["sshd", "systemd-timesyncd"],
+  "network_config": {
+    "type": "networkd"
+  }
+}
