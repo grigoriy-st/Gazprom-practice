@@ -1,0 +1,24 @@
+<networks>
+  <network>
+    <name>br0</name>
+    <forward mode='bridge'/>
+    <bridge name='virbr0'/>
+  </network>
+
+  <network>
+    <name>host-only</name>
+    <ip address='192.168.100.1' netmask='255.255.255.0'/>
+    <dhcp>
+      <range start='192.168.100.10' end='192.168.100.100'/>
+    </dhcp>
+  </network>
+
+  <network>
+    <name>nat-net</name>
+    <forward mode='nat'/>
+    <ip address='192.168.200.1' netmask='255.255.255.0'/>
+    <dhcp>
+      <range start='192.168.200.10' end='192.168.200.100'/>
+    </dhcp>
+  </network>
+</networks>
