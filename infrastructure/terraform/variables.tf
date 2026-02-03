@@ -1,9 +1,15 @@
 variable "cloud_image_path" {
-  description = "Путь к cloud-образу Arch Linux (.qcow2)"
+  description = "Path to cloud-image Arch Linux (.qcow2)"
   type        = string
 }
 
 variable "ssh_public_key" {
-  description = "SSH публичный ключ для доступа к ВМ"
+  description = "SSH key"
+  type        = string
+}
+
+variable "vm_count" {
+  description = "Number of vms"
+  default     = 3
   type        = string
 }
